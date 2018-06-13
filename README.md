@@ -1,1 +1,1 @@
-sparrow-wp-theme
+sparrow
