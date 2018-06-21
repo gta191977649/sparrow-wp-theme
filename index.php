@@ -3,17 +3,14 @@
     <?php if ( get_theme_mod( 'welcome_img_enable' ) ) { ?>
     <div class="welcome-banner" style="background-image: url('<?php echo get_theme_mod( 'welcome_img_url' );?>');">
         <div class="container">
-        <h1>
-        欢迎来到禾雀飛翔 </h1>
-        <p>
-        一只宅的博客，不定期更新、分享各种技术类的心得~ </p>
+        <h1><?php echo get_theme_mod('welcime_header_title'); ?></h1>
+        <p><?php echo get_theme_mod('welcime_header_description'); ?></p>
         <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
         </div>
     </div>
     <?php } ?>
     <div class="container">
     <div class="row">
-        
         <div class="col-9">
         <?php if(have_posts()):
                 while(have_posts()) : the_post(); ?>

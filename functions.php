@@ -10,6 +10,7 @@ function sparrow_script_enqueue() {
     wp_enqueue_style( 'bootstrap','//cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css');
     wp_enqueue_style( 'custom', get_template_directory_uri()."/css/custom.css");
     //wp_enqueue_style( 'bootstrap-va11','//gta191977649.github.io/bootstrap-va11/scss/main.css');
+    wp_enqueue_style( 'font-awsome','//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_script('jquery', "//cdn.bootcss.com/jquery/3.3.1/jquery.min.js",array(),null,true);
     wp_enqueue_script('bootstrapjs', "//cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js",array(),null,true);
     
@@ -94,9 +95,29 @@ function sparrow_customize_register( $wp_customize ) {
         'section' => 'custom_header_bk',
         'settings' => 'welcome_img_url',
         'type' => 'text',
-       
     ));
-    
+    /////// 欢迎图片文字设定 ///////
+    $wp_customize->add_setting('welcime_header_title',array(
+        'default' => get_bloginfo( 'name' ),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'welcime_header_title', array(
+        'label' => 'Header标题',
+        'section' => 'custom_header_bk',
+        'settings' => 'welcime_header_title',
+        'type' => 'text',
+    ));
+    $wp_customize->add_setting('welcime_header_description',array(
+        'default' => get_bloginfo( 'description' ),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'welcime_header_description', array(
+        'label' => 'Header描述',
+        'section' => 'custom_header_bk',
+        'settings' => 'welcime_header_description',
+        'type' => 'text',
+    ));
+
     /////// 如果用户开启了欢迎自定义图片 ///////////
     /*
     if(get_theme_mod( 'welcome_img_enable' )) {
