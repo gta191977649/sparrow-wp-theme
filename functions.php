@@ -9,10 +9,19 @@ require_once get_template_directory() . '/lib/class-wp-bootstrap-navwalker.php';
 function sparrow_script_enqueue() {
     wp_enqueue_style( 'bootstrap','//cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css');
     wp_enqueue_style( 'custom', get_template_directory_uri()."/css/custom.css");
+
+    wp_enqueue_style( 'background', get_template_directory_uri()."/css/background.css");
+    wp_enqueue_style( 'main', get_template_directory_uri()."/css/main.css");
     //wp_enqueue_style( 'bootstrap-va11','//gta191977649.github.io/bootstrap-va11/scss/main.css');
     wp_enqueue_style( 'font-awsome','//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style( 'jquery-ui-css','//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css');
     wp_enqueue_script('jquery', "//cdn.bootcss.com/jquery/3.3.1/jquery.min.js",array(),null,true);
+    
     wp_enqueue_script('bootstrapjs', "//cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js",array(),null,true);
+    
+    wp_enqueue_script('effect', get_template_directory_uri()."/js/effect.js",array(),null,true);
+    wp_enqueue_script('backgroundjs', get_template_directory_uri()."/js/background.js",array(),null,true);
+    //wp_enqueue_script('ajaxfy', get_template_directory_uri()."/js/ajaxfy.js",array(),null,true);
     
 }
 add_action('wp_enqueue_scripts', 'sparrow_script_enqueue');
@@ -40,9 +49,9 @@ function sparrow_widget_setup() {
         "id" => "sidebar-left",
         'class' => "",
         "description" => "Main sidebar for widgets",
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
+        'before_widget' => '<div class="card mb-4 %2$s" id="%1$s"><div class="card-body">',
+        'after_widget'  => '</div></div>',
+        'before_title'  => '<h2>',
         'after_title'   => '</h2>'
     ));
     /*
@@ -140,5 +149,30 @@ function sparrow_customize_register( $wp_customize ) {
     
  }
  add_action( 'customize_register', 'sparrow_customize_register' );
-
  add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+/*
+    ======================
+        Custom 评论显示样式
+    ======================
+*/
+function bootstrap_comment( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment; 
+    ?>
+    <?php if ( $comment->comment_approved == '1' ): ?>
+    <li class="media">
+        <div class="media-left">
+            <?php echo get_avatar( $comment ); ?>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <?php comment_author_link() ?>
+            </h4>
+            <time>
+                <a href="#comment-<?php comment_ID() ?>" pubdate>
+                    <?php comment_date() ?> at <?php comment_time() ?>
+                </a>
+            </time>
+            <?php comment_text() ?>
+        </div>
+    <?php endif;
+}

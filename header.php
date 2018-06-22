@@ -13,7 +13,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <a class="navbar-brand" href="#"><?php echo get_bloginfo('name') ?></a>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name') ?></a>
             <?php
             wp_nav_menu( array(
                 'theme_location'    => 'primary',
@@ -28,6 +28,7 @@
             ?>
         </div>
         </nav>
-   
-
+        <div class="background-1"></div>
+        <div class="background-2"></div>
+                
         

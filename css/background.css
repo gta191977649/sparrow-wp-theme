@@ -1,0 +1,43 @@
+/*
+    背景动画效果
+    By Sparrow
+*/
+@keyframes text-animation {
+    66%,100% {opacity: 1; }
+    83% {opacity: 0;}
+}
+@keyframes text-animation-rot {
+    66%, 100% { transform: rotatez(0deg); }
+    83% {transform: rotatez(150deg);}
+}
+
+.bk-element-text-pink {
+    
+    color:#ffc5d8;
+    font-size: 25px;
+    animation-name: text-animation;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    position: absolute;
+
+}
+.bk-element-text-blue {
+    color:#acdeff;
+    font-size: 30px;
+    animation-name: text-animation-rot;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    position: absolute;
+
+}
+
+.background-1 {
+    position: absolute;
+    z-index: -1;
+}
+.background-2 {
+    position: absolute;
+    z-index: -2;
+}
