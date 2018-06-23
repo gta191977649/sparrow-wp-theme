@@ -49,10 +49,10 @@ function sparrow_widget_setup() {
         "id" => "sidebar-left",
         'class' => "",
         "description" => "Main sidebar for widgets",
-        'before_widget' => '<div class="card mb-4 %2$s" id="%1$s"><div class="card-body">',
+        'before_widget' => '<div class="card mb-4 %2$s" id="%1$s">',
         'after_widget'  => '</div></div>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>'
+        'before_title'  => '<div class="card-header"><h3 class="widget-title">',
+        'after_title'   => '</h3></div><div class="card-body">'
     ));
     /*
     register_sidebar(array(

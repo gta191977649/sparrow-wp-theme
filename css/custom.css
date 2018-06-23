@@ -95,11 +95,11 @@ h3.widget-title {
     -webkit-transform: rotate(360deg);
 }
 
-#sidebar li {
+.widget-area .card-body li {
     list-style-type: none;
     
 }
-#sidebar ul {
+.widget-area .card-body ul {
     list-style-type: none;
     padding: 0px;
 }
