@@ -2,11 +2,16 @@
 <?php get_header(); ?>
     <?php if ( get_theme_mod( 'welcome_img_enable' ) ) { ?>
     <div class="welcome-banner" style="background-image: url('<?php echo get_theme_mod( 'welcome_img_url' );?>');">
-            
         <div class="container">
-        <h1 class="text-white"><?php echo get_theme_mod('welcime_header_title'); ?></h1>
-        <p class="font-weight-bold"><?php echo get_theme_mod('welcime_header_description'); ?></p>
-        
+            <h1  id="welcome-title"><?php echo get_theme_mod('welcime_header_title'); ?></h1>
+            <p class="font-weight-bold" id="welcome-description"><?php echo get_theme_mod('welcime_header_description'); ?></p>
+            <!--
+            <span id="a1">COLOR</span>
+            <span id="a2">COLOR</span>
+            <span id="a3">COLOR</span>
+            <span id="a4">COLOR</span>
+            <span id="a5">COLOR</span>
+            -->
         </div>
     </div>
     <?php } ?>

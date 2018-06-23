@@ -19,8 +19,9 @@ function sparrow_script_enqueue() {
     
     wp_enqueue_script('bootstrapjs', "//cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js",array(),null,true);
     
+    wp_enqueue_script('vibrant', get_template_directory_uri()."/js/vibrant.js",array(),null,true);
     wp_enqueue_script('effect', get_template_directory_uri()."/js/effect.js",array(),null,true);
-    wp_enqueue_script('backgroundjs', get_template_directory_uri()."/js/background.js",array(),null,true);
+    //wp_enqueue_script('backgroundjs', get_template_directory_uri()."/js/background.js",array(),null,true);
     //wp_enqueue_script('ajaxfy', get_template_directory_uri()."/js/ajaxfy.js",array(),null,true);
     
 }
