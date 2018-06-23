@@ -52,7 +52,7 @@ h2.entry-title {
     border-bottom: 1px solid #eaecef;
 }
 
-h3.widget-title {
+h3 .widget-title {
     font-size: 1.2rem;
 }
 
@@ -104,14 +104,17 @@ h3.widget-title {
     margin: 0;
     padding: 0;
 }
+.widget-area {
+    padding: 10px;
+}
 .widget-area li {
     list-style-type: none;
+    margin-top: 5px;
     
 }
 .widget-area ul {
     list-style-type: none;
     padding-left: 0px;
-    padding-top: 10px;
 }
 .widget-area ul li:hover {
     background-color: #eaecef;
