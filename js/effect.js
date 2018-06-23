@@ -42,9 +42,11 @@ jQuery(document).ready(function($) {
              */
             //设置字体颜色
 
-            $("#welcome-title").css("color",swatches["LightVibrant"].getHex())
-            $("#welcome-description").css("color",swatches["DarkVibrant"].getHex())
-            welcomeimg.css("text-shadow","1px 1px 1px "+swatches["DarkMuted"].getHex());
+            $("#welcome-title").css("color",swatches["LightVibrant"].getHex());
+            $("#welcome-title").css("text-shadow","3px 3px 0px "+swatches["DarkMuted"].getHex());
+            $("#welcome-description").css("color",swatches["Vibrant"].getHex());
+            $("#welcome-description").css("text-shadow","2px 2px 0px "+swatches["DarkMuted"].getHex());
+
             /*
             $("#a1").css("color",swatches["Vibrant"].getHex())
             $("#a2").css("color",swatches["Muted"].getHex())

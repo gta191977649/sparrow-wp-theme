@@ -71,9 +71,10 @@ h3.widget-title {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    text-shadow: 1px 1px 1px black;
+    /*text-shadow: 1px 1px 1px black;*/
     color: white;
 }
+
 
 .welcome-banner h1 {
     font-size: 4rem;

@@ -128,6 +128,17 @@ function sparrow_customize_register( $wp_customize ) {
         'type' => 'text',
     ));
 
+    $wp_customize->add_setting('img_credit_description',array(
+        'default' => null,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'img_credit_description', array(
+        'label' => '图片来源版权(*可选)',
+        'section' => 'custom_header_bk',
+        'settings' => 'img_credit_description',
+        'type' => 'text',
+    ));
+
     /////// 如果用户开启了欢迎自定义图片 ///////////
     /*
     if(get_theme_mod( 'welcome_img_enable' )) {
