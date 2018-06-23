@@ -29,14 +29,18 @@
         <?php if(have_posts()):
                 while(have_posts()) : 
                     ?>
+                    <!--
                     <div class="card mb-4">
                         <div class="card-body">
+                        -->
                             <?php
                                 the_post(); 
                                 get_template_part('content',get_post_format());
                             ?>
+                        <!--
                         </div>
                     </div>
+                    -->
                 <?php
                 endwhile; 
             endif;

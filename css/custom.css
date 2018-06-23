@@ -104,13 +104,17 @@ h3.widget-title {
     margin: 0;
     padding: 0;
 }
-.widget-area .card-body li {
+.widget-area li {
     list-style-type: none;
     
 }
-.widget-area .card-body ul {
+.widget-area ul {
     list-style-type: none;
-    padding: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+.widget-area ul li:hover {
+    background-color: #eaecef;
 }
 
 .badge:after {

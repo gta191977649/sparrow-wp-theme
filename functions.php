@@ -45,15 +45,27 @@ add_action( "init", "sparrow_theme_setup");
     ======================
 */
 function sparrow_widget_setup() {
+    /*
     register_sidebar(array(
         "name" => "侧边栏",
         "id" => "sidebar-left",
         'class' => "",
         "description" => "Main sidebar for widgets",
-        'before_widget' => '<div class="card mb-4 %2$s" id="%1$s">',
-        'after_widget'  => '</div></div>',
-        'before_title'  => '<div class="card-header"><h3 class="widget-title">',
-        'after_title'   => '</h3></div><div class="card-body">'
+        'before_widget' => '<div class="%2$s" id="%1$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>'
+    ));
+    */
+    register_sidebar(array(
+        "name" => "侧边栏",
+        "id" => "sidebar-left",
+        'class' => "",
+        "description" => "Main sidebar for widgets",
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
     ));
     /*
     register_sidebar(array(

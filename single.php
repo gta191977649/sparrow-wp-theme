@@ -6,8 +6,10 @@
 					
 				while ( have_posts() ) :
 					?>
+					<!--
 					<div class="card mb-4">
 						<div class="card-body">
+						-->
 							<?php
 							the_post();
 						
@@ -18,8 +20,10 @@
 							}
 							endwhile;
 							?>
+							<!--
 						</div>
 					</div>
+					-->
 				
 		
 		</div><!-- #primary -->
