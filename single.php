@@ -10,16 +10,16 @@
 					<div class="card mb-4">
 						<div class="card-body">
 						-->
-							<?php
-							the_post();
-						
-							get_template_part( 'content', get_post_format() );
-							
-							if ( comments_open() || get_comments_number() ) {
-								comments_template();
-							}
-							endwhile;
-							?>
+					<?php
+					the_post();
+				
+					get_template_part( 'content', get_post_format() );
+					
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+				endwhile;
+				?>
 							<!--
 						</div>
 					</div>

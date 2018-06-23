@@ -25,7 +25,7 @@
     <div class="row pt-3">
         <div class="col-9">
        
-        <h2 class="entry-title">友链</h2>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
         
         <?php 
             $bookmarks = get_bookmarks();
@@ -45,6 +45,17 @@
                 <?php
                 
             }
+        ?>
+        <?php 
+        //正文
+        while ( have_posts() ) :
+            the_post();
+            get_template_part( 'content-link', get_post_format() );
+            
+            if ( comments_open() || get_comments_number() ) {
+                comments_template();
+            }
+        endwhile;
         ?>
 
         </div>
