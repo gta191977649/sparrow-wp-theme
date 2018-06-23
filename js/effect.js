@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
     });
     //处理欢迎页面自适应字体颜色
     var welcomeimg = $(".welcome-banner");
-    if(welcomeimg != null) {
+    if(welcomeimg != undefined) {
     //获得背景图片URL
     bgurl = welcomeimg.css('background-image');
     bgurl = bgurl.replace('url(','').replace(')','').replace(/\"/gi, "");
