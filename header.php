@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootstrap theme</title>
+        <title><?php echo get_bloginfo('name') ?> - <?php echo get_bloginfo( 'description' )?></title>
         <?php wp_head(); ?>
     </head>
     <body>
