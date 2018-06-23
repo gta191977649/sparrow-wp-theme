@@ -5,12 +5,26 @@
 ?>
 
 <?php get_header(); ?>
+    <?php if ( get_theme_mod( 'welcome_img_enable' ) ) { ?>
+    <div class="welcome-banner" style="background-image: url('<?php echo get_theme_mod( 'welcome_img_url' );?>');">
+        <div class="container">
+            <h1 id="welcome-title"><?php echo get_theme_mod('welcime_header_title'); ?></h1>
+            <div id="welcome-description">
+                <h2 style="color: inherit;"><?php echo get_theme_mod('welcime_header_description'); ?></h2>
+            </div>
+            <?php 
+                if(get_theme_mod('img_credit_description') != null) {
+                ?>
+                <p class="text-white" style="text-shadow: 1px 2px 3px #666;"><?php echo get_theme_mod('img_credit_description') ?></p>
+            <?php } ?>
 
+        </div>
+    </div>
+    <?php } ?>
     <div class="container">
     <div class="row pt-3">
         <div class="col-9">
-        <div class="card mb-4">
-		<div class="card-body">
+       
         <h2 class="entry-title">友链</h2>
         
         <?php 
@@ -32,8 +46,7 @@
                 
             }
         ?>
-        </div>
-        </div>
+
         </div>
 <?php get_sidebar();?>
 <?php get_footer(); ?>
