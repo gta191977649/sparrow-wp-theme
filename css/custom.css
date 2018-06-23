@@ -126,4 +126,7 @@ h3.widget-title {
     color: inherit;
 }
 
-/* fixing catergory */
+/*Fix nav hover issue */
+.bg-sparrow .nav-link:hover {
+    background: inherit;
+}
