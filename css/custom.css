@@ -95,6 +95,14 @@ h3.widget-title {
     -webkit-transform: rotate(360deg);
 }
 
+.friend-name {
+    padding: 0;
+    margin: 0;
+}
+.friend-description {
+    margin: 0;
+    padding: 0;
+}
 .widget-area .card-body li {
     list-style-type: none;
     
