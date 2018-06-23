@@ -10,14 +10,16 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-sparrow" role="navigation">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-sparrow" role="navigation">
         <div class="container">
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i> <?php echo get_bloginfo('name') ?>
+        </a>
         <!-- Brand and toggle get grouped for better mobile display -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i> <?php echo get_bloginfo('name') ?></a>
+        
             <?php
             wp_nav_menu( array(
                 'theme_location'    => 'primary',
