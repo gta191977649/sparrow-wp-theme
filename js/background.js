@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
         var l = randomRange(0,$(window).width()-50);
         var t = randomRange(0,1000);
         var delay = randomRange(1,5);
-        $(".background-2").append('<span class="bk-element-text-blue" style="left:'+l+'px; top:'+t+'px; animation-delay:'+delay+'s;"><i class="fa fa-plus" aria-hidden="true"></i></span>');
+        $(".background-2").append('<span class="bk-element-text-blue" style="left:'+l+'px; top:'+t+'px; animation-delay:'+delay+'s;">=w=</span>');
     }
 
     function randomRange(min, max) {
