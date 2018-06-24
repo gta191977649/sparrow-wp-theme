@@ -26,8 +26,9 @@
         <div class="col-9">
        
         <h2 class="entry-title"><?php the_title(); ?></h2>
-        
+        <div class="row">
         <?php 
+        
             $bookmarks = get_bookmarks();
             if ( !empty($bookmarks) ){
                 foreach ($bookmarks as $bookmark) {
@@ -38,15 +39,13 @@
                 }     
             }
         ?>
+        </div>
         <?php 
         //正文
         while ( have_posts() ) :
             the_post();
             get_template_part( 'content-link', get_post_format() );
             
-            if ( comments_open() || get_comments_number() ) {
-                comments_template();
-            }
         endwhile;
         if ( comments_open() || get_comments_number() ) {
             comments_template();
