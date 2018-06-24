@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<div class="container" id="main-container">
     <div class="row mt-4">
-		<div class="col-sm-9" id="main-content">
+		<div class="col-md-9" id="main-content">
 				<?php
 					
 				while ( have_posts() ) :
