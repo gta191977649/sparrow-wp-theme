@@ -13,7 +13,7 @@
 					<?php
 					the_post();
 				
-					get_template_part( 'content-post', get_post_format() );
+					get_template_part( 'content-page', get_post_format() );
 					
 				
 				endwhile;
