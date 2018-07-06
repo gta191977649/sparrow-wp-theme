@@ -12,6 +12,7 @@ function sparrow_script_enqueue() {
 
     wp_enqueue_style( 'background', get_template_directory_uri()."/css/background.css");
     wp_enqueue_style( 'main', get_template_directory_uri()."/css/main.css");
+    wp_enqueue_style( 'font', get_template_directory_uri()."/css/font.css", array(),'1.0.0',"none");
     //wp_enqueue_style( 'bootstrap-va11','//gta191977649.github.io/bootstrap-va11/scss/main.css');
     wp_enqueue_style( 'font-awsome','//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style( 'jquery-ui-css','//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css');
@@ -21,6 +22,8 @@ function sparrow_script_enqueue() {
     
     wp_enqueue_script('vibrant', get_template_directory_uri()."/js/vibrant.js",array(),null,true);
     wp_enqueue_script('effect', get_template_directory_uri()."/js/effect.js",array(),null,true);
+
+
     /*
     wp_enqueue_script('font-cdn', "//cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js",array(),null,true);
     wp_enqueue_script('font-cutom-js',  get_template_directory_uri()."/js/font.js",array(),null,true);
@@ -29,6 +32,15 @@ function sparrow_script_enqueue() {
     //wp_enqueue_script('ajaxfy', get_template_directory_uri()."/js/ajaxfy.js",array(),null,true);
     
 }
+add_filter('style_loader_tag', 'sparrw_custom_font_tag');
+
+function sparrw_custom_font_tag($tag){
+
+    $tag = preg_replace("/id='font-css'/", "id='font-css' onload=\"if(media!='all')media='all'\"", $tag);
+
+    return $tag;
+}
+
 add_action('wp_enqueue_scripts', 'sparrow_script_enqueue');
 /*
     ======================
