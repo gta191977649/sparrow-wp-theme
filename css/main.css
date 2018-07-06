@@ -57,8 +57,8 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 }
 @font-face {
   font-family: 'XinGothic';
-  src:  url('../fonts/XinGothic.otf')  format('opentype'),
-        url('../fonts/XinGothic.ttf')  format('truetype');
+  src:  url('//font.sparrow.moe/XinGothic.otf')  format('opentype'),
+        url('//font.sparrow.moe/XinGothic.ttf')  format('truetype');
 
 }
 body {
