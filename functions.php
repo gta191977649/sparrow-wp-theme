@@ -22,6 +22,8 @@ function sparrow_script_enqueue() {
     
     wp_enqueue_script('vibrant', get_template_directory_uri()."/js/vibrant.js",array(),null,true);
     wp_enqueue_script('effect', get_template_directory_uri()."/js/effect.js",array(),null,true);
+    wp_enqueue_script('font-cdn',"http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js",array(),null,true);
+    wp_enqueue_script('font-js', get_template_directory_uri()."/js/font.js",array(),null,true);
 
 
     /*
