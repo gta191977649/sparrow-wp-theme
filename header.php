@@ -12,9 +12,8 @@
     <body>
         <nav class="navbar navbar-expand-xl navbar-dark bg-sparrow" role="navigation">
         <div class="container">
-        <!-- frosted glass effect 
-        <div class="wrap-blur"></div>
-        -->
+        <!-- frosted glass effect -->
+       
         <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i> <?php echo get_bloginfo('name') ?>
         </a>
         <!-- Brand and toggle get grouped for better mobile display -->
